@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face{
+  font-family: "burtons";
+  src: url('../public/Burtons.otf');
+  font-family: "indie", "cursive";
+  src: url('../public/IndieFlower-Regular.ttf');
+  font-family: "Butler";
+  src: url('../public/Butler_Medium.otf');
+  font-family: "chriselda";
+  src: url('../public/Chriselda-w1yDP.ttf');
+  font-family: "cartograph";
+  src: url('../public/Cartograph\ CF\ Regular.ttf');
+  font-family: "blackbird";
+  src: url('../public/Blackbird-mLYg9.ttf');
+  font-family: "sacramento";
+  src: url('../public/Sacramento-Regular.ttf');
+  font-family: "Consolas";
+  src: url('../public/CONSOLA.TTF');
+  font-family: "redrains";
+  src: url('../public/Redrains\ DEMO.otf');
+}
