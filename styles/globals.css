@@ -38,4 +38,8 @@ a {
   src: url('../public/CONSOLA.TTF');
   font-family: "redrains";
   src: url('../public/Redrains\ DEMO.otf');
+  font-family: "SFPro";
+  src: url('../public/SF-Pro-Display-Regular.otf');
+  font-family: "Swagen";
+  src: url('../public/SwagenRegular-PKMeP.otf');
 }

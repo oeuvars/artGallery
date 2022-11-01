@@ -20,8 +20,13 @@ import day10 from "../public/10.png";
 import day11 from "../public/11.png";
 import day12 from "../public/12.png";
 import { useState } from 'react';
-import motion from 'framer-motion';
-
+import { motion } from 'framer-motion';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import abstract from "../pages/components/Abstract";
+import aesthetic from "../pages/components/Aesthetic";
+import creative from "../pages/components/Creative";
+import bs from "../pages/components/Bullshit";
+import { StaticRouter } from 'react-router-dom';
 
 
 export default function Home() {
@@ -34,6 +39,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+
       <main className='bg-eggshell px-10 md:px-20 lg:px-40 dark:bg-gray-90'>
         <section className= "min-h-screen">
           <nav className="py-5 px-1 mb-12 flex justify-between">
@@ -44,16 +50,16 @@ export default function Home() {
               <li>
                 <BsFillMoonStarsFill onclick={() =>setDarkMode(!darkMode)}className='cursor-pointer text-2xl'/>
               </li>
-              <li><a className='bg-gradient-to-r from-deepchampagne to-terracotta text-eggshell px-4 py-2 rounded-lg ml-8' href="#">Resume</a></li>
+              <motion.button animate={{scale: 1}}><motion.a animate={{scale: 1}} className='bg-gradient-to-r from-deepchampagne to-terracotta text-eggshell font-sfpro px-4 py-2 rounded-lg ml-8' href="https://oeuvars.github.io/CV/">Resume</motion.a></motion.button>
             </ul>
           </nav>
           <div className='text-center p-10'>
-            <h2 className='text-9xl font-sacramento py-4 text-brightred md:text-6xl'>Anurag Das</h2>
+            <motion.h2 initial={{opacity: 0, y: -250}} animate={{scale: 2, transition: 5 , color: '#DB3A34', y: -15, opacity: 1}} className='text-9xl font-sacramento py-4 text-pumpkin md:text-6xl'>Anurag Das</motion.h2>
             <h3 className='text-3xl text-greensheen font-chriselda py-10 md:text-3xl'>Designer and Developer.</h3>
-            <p className='text-md font-reddrains font-medium py-4 leading-10 text-jet md:text-xl max-w-screen-lg mx-auto'>A Man Without Purpose, Distracts Himself With Cheap Pleasure.</p>
+            <p className='text-md font-medium font-swagen py-4 leading-10 tracking-wider text-jet md:text-xl max-w-screen-lg mx-auto'>A Man Without Purpose, Distracts Himself With Cheap Pleasure.</p>
           </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-400'>
-            <AiFillTwitterCircle />
+            <AiFillTwitterCircle/>
             <AiFillLinkedin />
             <AiFillYoutube />
           </div>
@@ -65,7 +71,7 @@ export default function Home() {
         <section>
           <div>
             <h3 className='text-4xl font-blackbird text-tyrianpurple py-2 px-2 mt-10'>ArtWorks</h3>
-            <p className='text-xl font-medium py-2 px-2 leading-8 text-jet font-reddrains mt-3 mb-9'>
+            <p className='text-xl font-medium py-2 px-2 leading-8 text-jet font-swagen mt-3 mb-9'>
               If <span className='text-terracotta'>Picasso</span> was a digital artist, do you think he would come up with something like this?
               <span className=''> Anyway, check out the designs xD.</span>
             </p>
@@ -75,7 +81,7 @@ export default function Home() {
               <div className='flex justify-center'>
               <Image src={coffeedesign} alt="" width={150} height={150}/>
               </div>
-               <h3 className='text-lg font-butler text-rosewood pb-2'>Creative Designs</h3>
+               <h3 className='text-lg font-sfpro text-rosewood pb-2'>Creative Designs</h3>
                <p className='py-2 font-consolas text-jet text-opacity-85'>
                 {" "}
                 Creating elegant designs suited for your needs following core design theory.
@@ -86,7 +92,7 @@ export default function Home() {
               <Image src={designer} alt="" width={150} height={150}  />
               </div>
 
-               <h3 className='text-lg font-butler text-rosewood pb-2'>Abstract Designs</h3>
+               <h3 className='text-lg font-sfpro text-rosewood pb-2'>Abstract Designs</h3>
                <p className='py-2 font-consolas text-jet text-opacity-85'>
                 {" "}
                 Creating elegant designs suited for your needs following core design theory.
@@ -97,7 +103,7 @@ export default function Home() {
               <Image src={salon} alt="" width={150} height={150} />
               </div>
 
-               <h3 className='text-lg font-butler text-rosewood pb-2'>Aesthetic Designs</h3>
+               <h3 className='text-lg font-sfpro text-rosewood pb-2'>Aesthetic Designs</h3>
                <p className='py-2 font-consolas text-jet text-opacity-85'>
                 {" "}
                 Creating elegant designs suited for your needs following core design theory.
