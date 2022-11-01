@@ -22,10 +22,6 @@ import day12 from "../public/12.png";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import abstract from "../pages/components/Abstract";
-import aesthetic from "../pages/components/Aesthetic";
-import creative from "../pages/components/Creative";
-import bs from "../pages/components/Bullshit";
 import { StaticRouter } from 'react-router-dom';
 
 
